@@ -1,0 +1,93 @@
+# My Squirrel settings
+# encoding: utf-8
+# [Config File description](https://github.com/rime/squirrel/blob/master/data/squirrel.yaml)  
+
+patch:
+  keyboard_layout: last
+
+  chord_duration: 0.1
+
+  show_notifications_when: appropriate
+
+  style:
+    color_scheme: wetype_light
+    color_scheme_dark: wetype_dark
+    candidate_list_layout: linear  # stacked | linear       候选项横、竖排显示
+    text_orientation: horizontal  # horizontal | vertical
+    inline_preedit: true # 拼音位于候选框  false | 行内 true
+
+  # 是否将选定的候选项作为文本嵌入输入框
+    inline_candidate: false
+    # 候选面板是否紧贴屏幕边缘以减少跳动
+    memorize_size: true
+    # 透明颜色是否相互叠加
+    mutual_exclusive: false
+    # 是否使用半透明背景。仅当背景颜色为透明时可见
+    translucency: false
+    # 启用显示小箭头，指示是否可以向上/向下分页
+    show_paging: false
+
+    corner_radius: 4 # 外边框 圆角半径
+    hilited_corner_radius: 0 # 选中框 圆角半径
+    border_width: 0 # 外边框宽
+    border_height: 0 # 外边框高
+    line_spacing: 8 # 行间距
+
+    candidate_format: "[label]  [candidate]  [comment]"
+    color_space: display_p3  # 色彩空间： sRGB | display_p3
+    font_point: 16
+    label_font_point: 8.5
+    comment_font_point: 16
+
+  # 皮肤主题
+  preset_color_schemes:
+    wetype_light:
+      name: "微信输入法 浅色"
+      author: Dxy
+      candidate_text_color: 0x3c3c3c # 文字颜色
+      candidate_back_color: 0xFFFFFF # 候选项底色
+      hilited_candidate_back_color: 0x79af22 # 选中底色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      hilited_candidate_text_color: 0xFFFFFF # 选中文字颜色
+      hilited_comment_text_color: 0x999999 # 选中注颜色
+
+    wetype_dark:
+      name: "微信输入法 深色"
+      author: Dxy
+      candidate_text_color: 0xbbbbbb # 候选文字颜色
+      candidate_back_color: 0x000000 # 候选文字底色
+      hilited_candidate_back_color: 0x79af22 # 选中底色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      hilited_candidate_text_color: 0xFFFFFF # 选中文字颜色
+      hilited_comment_text_color: 0xFFFFFF # 选中注颜色
+
+    macos_light:
+      name: "MacOS 浅色"
+      author: Dxy
+      candidate_back_color: 0xFFFFFF # 候选项底色
+      candidate_text_color: 0x3c3c3c # 文字颜色
+      hilited_candidate_back_color: 0xD75A00 # 选中底色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      hilited_candidate_text_color: 0xFFFFFF # 选中文字颜色
+      hilited_comment_text_color: 0xFFFFFF # 选中注颜色
+
+    macos_dark:
+      name: "MacOS 深色"
+      author: Dxy
+      candidate_text_color: 0xe9e9ea # 文字颜色
+      candidate_back_color: 0x1f1e2d # 候选项底色
+      hilited_candidate_label_color: 0xFFFFFF # 选中序号颜色
+      hilited_candidate_back_color: 0xD75A00 # 选中底色
+      hilited_candidate_text_color: 0xFFFFFF # 选中文字颜色
+      hilited_comment_text_color: 0x999999 # 选中注颜色
+
+  # 特定App默认中/英文输入
+  app_options:
+    com.mitchellh.ghostty: # Ghostty
+      ascii_mode: true # true默认英文,false默认中文
+    com.apple.Terminal: # 终端
+      ascii_mode: true
+    com.raycast.macos: # Raycast
+      ascii_mode: true
+    com.google.Chrome:
+      inline: true
